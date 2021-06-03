@@ -3,7 +3,7 @@ permalink: /about/
 title: "About"
 excerpt: "About Me"
 search: true
-last_modified_at: 2020-01-23T13:00:00+09:00
+last_modified_at: 2021-06-01T13:00:00+09:00
 toc: true
 
 --- 
