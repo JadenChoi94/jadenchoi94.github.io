@@ -24,13 +24,14 @@ padding: 5px;
 
 ## Career & Activities
   - WIPS (2020.01 ~ 2021.01)
+  - LG Electronics in Vietnam, Haiphong (2019.01 ~ 2019.02)
   - SolBridge International School of Business (2013.03 ~ 2019.08)
   - Korea Army Training Center, Drill Sergeant (2014.12 ~ 2016.09)
 
 ## Current Interest
- * Bigdata
- * Android Applicaiton 
  * Web Development
+ * Bigdata
+ * Android Applicaiton  
  * Internet of Things
 
 ## Contact
