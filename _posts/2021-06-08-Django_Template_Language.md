@@ -106,7 +106,7 @@ variable이 "codeit" 일 때 {{ variable|ljust:"10" }} 이라면 "codeit    "이
 
 
 
-# 템플릿 태그 (Template_Tag)
+# 템플릿 태그 (Template Tag)
 
 ```html
 {% raw %} {% tag %} {% endraw %}
