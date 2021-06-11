@@ -109,13 +109,13 @@ variable이 "codeit" 일 때 {{ variable|ljust:"10" }} 이라면 "codeit    "이
 # 템플릿 태그 (Template_Tag)
 
 ```html
-{% tag %}
+{% raw %} {% tag %} {% endraw %}
 ```
 
 템플릿 태그는 템플릿을 작성할 때 반복문, 조건문 등의 로직을 사용해서 마치 프로그래밍을 하듯 템플릿을 작성할 수 있게 해줍니다. Django가 기본적으로 제공하는 태그가 있지만, 개발자가 직접 태그를 정의해서 사용할 수도 있습니다.
 
 ```html
-{% tag %} ~ {% endtag %}
+{% raw %}{% tag %} ~ {% endtag %}{% endraw %}
 ```
 
 태그의 형태는 단독으로 사용하는 템플릿 태그와 여는 태그와 닫는 태그가 필요한 템플릿 태그가 있습니다. 아래는 몇 가지 기본 템플릿 태그입니다.
@@ -123,57 +123,57 @@ variable이 "codeit" 일 때 {{ variable|ljust:"10" }} 이라면 "codeit    "이
 ### **for**
 
 ```
-{% for obj in values %} ~ {% endfor %}
+{% raw %}{% for obj in values %} ~ {% endfor %}{% endraw %}
 ```
 
 반복 가능한 객체를 반복하며 템플릿을 작성 할 수 있습니다. 아래처럼 말이죠.
 
 ```html
-{% for food in foods %} 
+{% raw %}{% for food in foods %} {% endraw %}
     <li> {{ food.name }} </li>
-{% endfor %}
+{% raw %}{% endfor %}{% endraw %}
 ```
 
 만약 목록을 역순으로 반복하고 싶다면 아래와 같이 사용 할 수 있습니다.
 
 ```html
-{% for food in foods reversed %} 
+{% raw %}{% for food in foods reversed %} {% endraw %}
     <li> {{ food.name }} </li>
-{% endfor %}
+{% raw %}{% endfor %}{% endraw %}
 ```
 
-반복 가능한 객체가 비어 있거나 존재하지 않을 때는 아래와 같이 사용 할 수 있습니다. 아래는 만약 foods라는 객체가 비어있다면 {% empty %} 구문이 실행됩니다.
+반복 가능한 객체가 비어 있거나 존재하지 않을 때는 아래와 같이 사용 할 수 있습니다. 아래는 만약 foods라는 객체가 비어있다면 {% raw %}{% empty %}{% endraw %} 구문이 실행됩니다.
 
 ```html
-{% for food in foods %} 
+{% raw %}{% for food in foods %} {% endraw %}
     <li> {{ food.name }} </li>
-{% empty %}
+{% raw %}{% empty %}{% endraw %}
     <li> There is no food. </li>
-{% endfor %}
+{% raw %}{% endfor %}{% endraw %}
 ```
 
 ### **if**
 
 ```
-{% if value1 %} ~ {% elif value2 %} ~ {% else %} ~ {% endif %}
+{% raw %}{% if value1 %} ~ {% elif value2 %} ~ {% else %} ~ {% endif %}{% endraw %}
 ```
 
 파이썬에서 사용하던 조건문과 형태가 비슷하죠? 실제로 사용 할 때도 우리가 아는 조건문의 형태로 사용하면 됩니다.
 
 ```html
-{% if hungry %}
+{% raw %}{% if hungry %}{% endraw %}
     <p> Let's eat! </p>
-{% elif sleepy %}
+{% raw %}{% elif sleepy %}{% endraw %}
         <p> You need some coffee. </p>
-{% else %}
+{% raw %}{% else %}{% endraw %}
     <p> Go back to work. </p>
-{% endif %}
+{% raw %}{% endif %}{% endraw %}
 ```
 
 ### **with**
 
 ```
-{% with value1=value2 %} ~ {% endwith %}
+{% raw %}{% with value1=value2 %} ~ {% endwith %}{% endraw %}
 ```
 
 복잡한 변수가 있을 때 '별명'을 붙이기 위해 사용합니다. with 구문 내에서는 value1을  value2 대신 사용할 수 있습니다.
