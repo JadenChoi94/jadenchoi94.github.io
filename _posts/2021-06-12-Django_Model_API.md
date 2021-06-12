@@ -62,14 +62,17 @@ Queryset을 반환 하는 API
 | first()         | 쿼리셋의 가장 첫번째 모델 데이터를 반환, 정렬하지 않은 쿼리셋이라면 pk를 기준으로 정렬 후 반환, 만약 데이터가 없다면 None | Post.objects.order_by('title').first()                       |
 | last()          | 연산된 쿼리셋의 가장 가지막 모델 데이터를 반환, 만약 데이터가 없다면 None | Post.objects.order_by('title').last()                        |
 
+
 그 외 API
 
+
 | API      | 설명                                                         | 예시                                                         |
-| -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| -------- |------------------------------------------------------------|--------------------------------|
 | exists() | 연산된 쿼리셋에 데이터가 있다면 True 반환                    | Post.objects.get(pk=812).exists()                            |
 | count()  | 쿼리셋의 데이터 개수를 정수로 반환                           | Post.objects.all().count()                                   |
-| update() | 데이터를 수정할 때 사용 (여러 데이터 또는 여러 필드를 한 번에 수정 가능), 수정된 데이터의 개수를 정수로 반환 | Post.objects.filter('dt_created'__yeaer=2021).update(context='codeit') → 생성일이 2021년인 모든 포스트 데이터들의 context를 'codeit'으로 바꾸고 변경된 데이터의 개수를 리턴 |
+| update() | 데이터를 수정할 때 사용 (여러 데이터 또는 여러 필드를 한 번에 수정 가능), 수정된 데이터의 개수를 정수로 반환 | Post.objects.filter('dt_created'__yeaer=2021).update(context='codeit') → 생성일이 2021년인 모든포스트 데이터들의 context를 'codeit'으로 바꾸고 변경된 데이터의 개수를 리턴 |
 | delete() | 데이터를 삭제할 때 사용                                      | post = Post.objects.get(pk=1) post.delete()                  |
+
 
 ## 필드 조건 옵션 (Field Lookups)
 
