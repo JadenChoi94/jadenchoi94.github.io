@@ -31,12 +31,12 @@ Cross-Site라는 말이 붙은 이유는 악성 사이트에서 보안이 취약
 
 
    ```html
-   {% raw %}<form action="www.example-weak.com/user-info/account" method="post">
+   <form action="www.example-weak.com/user-info/account" method="post">
        <div>응모에 당첨되셨습니다!</div>
        <label type="hidden" name="withdraw" value="withdraw"> # 숨김 처리된 input
        <label type="hidden" name="amount" value="1000000">  # 숨김 처리된 input
        <input type="submit" value="경품받기">
-   </form>{% endraw %}
+   </form>
    ```
 
 5. 요청을 보낼 때 유저가 가지고 있는 인증 정보도 함께 서버로 전송됩니다.
