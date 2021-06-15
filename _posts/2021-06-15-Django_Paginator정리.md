@@ -106,12 +106,12 @@ Template에서는 View에서 넘어온 Page를 이용해서 화면을 구성하�
 
 ```html
 ...
-
+{% raw %}
 {% for post in page_obj.object_list %}
     <p>post로 부터 조회한 데이터</p>
     <p>{{ post.title }}</p>
 {% endfor %}
-
+{% endraw %}
 ...
 ```
 
@@ -119,11 +119,12 @@ Template에서는 View에서 넘어온 Page를 이용해서 화면을 구성하�
 
 ```html
 ...
-
+{% raw %}
 {% if page_obj.has_previous %} <!-- 만약 현재 페이지의 이전 페이지가 있다면 -->
     <a href="?page=1"> first</a>
     <a href="?page={{ page_obj.previous_page_number }}">prev</a> <!-- 이전 페이지 번호 -->
 {% endif %}
+{% endraw %}
 
 <span>
     Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
@@ -131,11 +132,12 @@ Template에서는 View에서 넘어온 Page를 이용해서 화면을 구성하�
     <!-- page_obj.paginator.num_pages : 페이지를 관리하는 Paginator가 가지고 있는 전체 페이지 수 -->
 </span>
 
+{% raw %}
 {% if page_obj.has_next %} <!-- 만약 현재 페이지의 다음 페이지가 있다면 -->
     <a href="?page={{ page_obj.next_page_number }}">next</a> <!-- 다음 페이지 번호 -->
     <a href="?page={{ page_obj.paginator.num_pages }}">last </a> <!-- 전체 페이지의 개수 = 마지막 페이지 번호 -->
 {% endif %}
-
+{% endraw %}
 ...
 ```
 
