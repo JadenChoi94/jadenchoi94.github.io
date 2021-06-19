@@ -7,6 +7,8 @@ categories:
 tag:
     - Django
     - python
+    - DRF
+    
 
 comments: true
 last_modified_at: 2021-06-17T11:00:00+09:00
