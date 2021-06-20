@@ -19,7 +19,7 @@ Django와 RESTful API개발에 도움을 주는 ***Django REST framework*** 를 
 
 # 프로젝트 생성
 
-우선 기본적인 Django 프로젝트를 생성합니다. Django를 처음 접하시는 분은 [*Make a Simple Blog with Django*](https://medium.com/wasd/django로-간단한-블로그-만들기-1-개요-프로젝트-구성-83d03ec74395)를 읽고 오시면 도움이 됩니다.
+우선 기본적인 Django 프로젝트를 생성합니다. 
 
 저는 다음과 같은 디렉터리 구조로 생성했습니다.
 
