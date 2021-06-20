@@ -1,6 +1,6 @@
 ---
 title: '[Django] AWS EC2 만들고 Django 연결하기'
-excerpt: 서버개발자 체험하기
+excerpt: 서버개발자 체험하기v1
 categories:
     - Django
 
