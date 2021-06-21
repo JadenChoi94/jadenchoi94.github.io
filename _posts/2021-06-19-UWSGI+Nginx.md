@@ -79,7 +79,7 @@ pip install uwsgi
 
  
 
-설치하고 나면 현재 프로젝트에 기본적인 세팅이 되어있다. 실행만 시키면 된다. uwsgi를 입력하면 아래와 같은 화면이 나옵니다. 
+설치하고 나면 현재 프로젝트에 기본적인 세팅이 되어있다. 실행만 시키면 된다. uwsgi를 입력하면 아래와 같은 화면이 나온다. 
 
 
 
@@ -89,7 +89,7 @@ pip install uwsgi
 
  
 
-기본적으로 설정돼있는 값을 가지고 uwsgi가 실행되는 것을 알 수 있다. 우리가 만든 Django 프로젝트를 uwsgi에 연결시키려면 다음과 같은 명령어를 입력하면 된다.
+기본적으로 설정돼있는 값을 가지고 uwsgi가 실행되는 것을 알 수 있다. 현재 Django 프로젝트를 uwsgi에 연결시키려면 다음과 같은 명령어를 입력하면 된다.
 
  
 
@@ -99,15 +99,13 @@ uwsgi --http :8000 --module server_dev.wsgi
 
  
 
-여기서 server_dev는 프로젝트 이름이다. 만약 여러분의 프로젝트가 다른 이름이라면 server_dev대신 다른 이름으로 넣으면 된다. --http :8000 옵션을 넣으면 ip주소:8000으로 접속 가능하다. 나중에 이 부분을 리눅스 소켓으로 바꿀 건데, 왜 바꾸는지는 그때 설명하도록 하겠다.
-
-
+여기서 server_dev는 프로젝트 이름이다. 만약 프로젝트가 다른 이름이라면 server_dev대신 다른 이름으로 넣으면 된다. --http :8000 옵션을 넣으면 ip주소:8000으로 접속 가능하다. 
 
 ![img](https://blog.kakaocdn.net/dn/DqZZz/btqDQsZ2Di8/4fBay2DPKcX5uCeZgnJuG0/img.png)이전과 다르게 worker가 하나 구동되었다고 뜬다.
 
 
 
-이제 uwsgi를 통해 서버가 구동되었다. 테스트는 간단한다. runserver로 했을 때와 같이 서버에 접속해보면 된다. 저는 duckdns라는 사이트를 통해 AWS 주소에 대한 도메인을 등록했기 때문에 choaws.duckdns.org:8000로 들어갈 수 있다. 여러분은 여러분의 AWS EC2의 IP주소를 입력해서 들어가시면 된다.
+이제 uwsgi를 통해 서버가 구동되었다. 테스트는 간단한다. runserver로 했을 때와 같이 서버에 접속해보면 된다. 유튜버님은 duckdns라는 사이트를 통해 AWS 주소에 대한 도메인을 등록했기 때문에 choaws.duckdns.org:8000로 들어갈 수 있었다. 도메인등록을 안했으면 AWS EC2의 IP주소를 입력해서 들어가면 된다.
 
  
 
@@ -149,9 +147,9 @@ logger = file:/tmp/uwsgi.log
 
  
 
-**home**은 가상 머신 위치, **chdir**은 프로젝트 경로, **module**은 프로젝트이름.wsgi:application을 적으면 된다. ini파일 안에서는 home경로를 ~로 표기할 수 없으니 절대 경로로 적어주셔야 한다. socket은 나중에 linux소켓을 이용한 통신을 할 때 사용할 소켓의 경로를 나타낸다. 구글링 해보니 로그파일이나 소켓 파일은 대부분 tmp경로에 만든다.
+**home**은 가상 머신 위치, **chdir**은 프로젝트 경로, **module**은 프로젝트이름.wsgi:application을 적으면 된다. ini파일 안에서는 home경로를 ~로 표기할 수 없으니 절대 경로로 적어야 한다. socket은 나중에 linux소켓을 이용한 통신을 할 때 사용할 소켓의 경로를 나타낸다. 구글링 해보니 로그파일이나 소켓 파일은 대부분 tmp경로에 만든다.
 
-> **꼭 module은 프로젝트이름과 동일 한지 확인하자 이거때문에 3시간 날렸다.**
+> **꼭 여기서 module은 프로젝트이름과 동일 한지 확인하자 이거때문에 3시간 동안 삽질했다.**
 
 **master**옵션은 master프로세스를 띄우냐 마냐인데 uwsgi로 하나의 앱을 관리할 경우는 띄우는 게 좋다. master프로세스가 데몬 역할을 해줘서 worker 프로세스들이 죽으면 알아서 띄워준다. 추가적으로 master프로세스만 찍을 수 있는 로그도 있다. 
 
@@ -165,7 +163,7 @@ logger = file:/tmp/uwsgi.log
 
 
 
-**vacuum옵션은** uwsgi가 종료되고 나면 tmp파일을 지울지 말지 옵션이다. 설정해두면 uwsgi가 내려갔을때 .sock파일이나 .pid파일들이 지워집니다.  
+**vacuum옵션은** uwsgi가 종료되고 나면 tmp파일을 지울지 말지 옵션이다. 설정해두면 uwsgi가 내려갔을때 .sock파일이나 .pid파일들이 지워진다.  
 
  
 
@@ -191,11 +189,9 @@ uwsgi --http :8000 -i /etc/uwsgi/sites/server_dev.ini
 
 
 
-로그를 보고 싶으면 tail -f uwsgi.log를 하시면 실시간으로 확인할 수 있다. sock파일이 생기긴 했지만 uwsgi를 실행할 때 http 옵션을 주었기 때문에 여기서는 사용되지 않습니다. 나중에 웹서버랑 연계할 때 사용된다. 
+로그를 보고 싶으면 tail -f uwsgi.log를 하시면 실시간으로 확인할 수 있다. sock파일이 생기긴 했지만 uwsgi를 실행할 때 http 옵션을 주었기 때문에 여기서는 사용되지 않습니다. 나중에 웹서버랑 연계할 때 사용된다.  
 
- 
-
-길고 긴 uwsgi 세팅이 끝났네요. 이제 웹서버로 넘어가겠습니다.
+길고 긴 uwsgi 세팅이 끝났다. 이제 웹서버로 넘어가보자.
 
  
 
@@ -219,9 +215,9 @@ sudo apt-get install nginx
 
 ![img](https://blog.kakaocdn.net/dn/beP7PB/btqDTke0U2Y/GuD84lihDbjPrv20opyJN1/img.png)nginx -v 로 설치되었는지 확인 가능
 
- 
+apt-get으로 nginx를 설치했다면 /etc/nginx/ 폴더가 생겼을거다. 여기에 config들이 모여있는데 디폴트 설정이 되어있기 때문에 살짝 변경해준다. 
 
-apt-get으로 nginx를 설치했다면 /etc/nginx/ 폴더가 생겼을거다. 여기에 config들이 모여있는데 디폴트 설정이 되어있기 때문에 살짝 변경해준다. 가장 상위 config는 /etc/nginx/nginx.conf이다. vi로 열어보자~  
+가장 상위 config는 /etc/nginx/nginx.conf이다. vi로 열어보자~  
 
 
 
@@ -325,7 +321,7 @@ nginx config는 {}를 사용해 "블록"단위로 나누어진다. 블록밖에 
 
  
 
-그다음은 압축방법인 gzip에 대한 설명인데 자세한 설명은 외부에서 긁어왔습니다.
+그다음은 압축방법인 gzip에 대한 설명인데 자세한 설명은 외부에서 긁어왔다.
 
  
 
@@ -366,7 +362,7 @@ gzip_types [types in array] : “text/html”을 제외하고 MIME 타입에서 
 
 
 
-![img](https://blog.kakaocdn.net/dn/IrzKP/btqDVvupGP5/L3eaYRhviBueKQfWBZ1M2k/img.png)디폴트는 무시하고 server_dev를 생성해봅시다.
+![img](https://blog.kakaocdn.net/dn/IrzKP/btqDVvupGP5/L3eaYRhviBueKQfWBZ1M2k/img.png)디폴트는 무시하고 server_dev를 생성한다.
 
 
 
@@ -374,7 +370,7 @@ gzip_types [types in array] : “text/html”을 제외하고 MIME 타입에서 
 
 
 
-![img](https://blog.kakaocdn.net/dn/m8FE4/btqDUFYNez8/ZVEZJT5nxzHHjF5reCKPpk/img.png)설정은 간단합니다~!
+![img](https://blog.kakaocdn.net/dn/m8FE4/btqDUFYNez8/ZVEZJT5nxzHHjF5reCKPpk/img.png)설정은 간단하다~!
 
 
 
@@ -382,47 +378,31 @@ gzip_types [types in array] : “text/html”을 제외하고 MIME 타입에서 
 
  
 
-**upstream** : 서버 그룹을 정의하는 곳이다. server [주소 or 소켓]으로 서버 목록들을 나열할 수 있다. uwsgi는 소켓으로 띄웠던 거 기억하시나요? /tmp/django.sock으로 띄웠었는데 그거 적어주시면 된다.
+**upstream** : 서버 그룹을 정의하는 곳이다. server [주소 or 소켓]으로 서버 목록들을 나열할 수 있다. uwsgi는 소켓으로 띄웠던 거 기억하죠? /tmp/django.sock으로 띄웠었는데 그거 적어주면 된다.
 
  
 
-**server** : 서버에 대한 상세 정의이다. listen으로 포트를 적고 server_name은 localhost를 적습니다. client_max_body_size는 요청이 올라올 때 최대 크기를 정하는 건데 입맛대로 해주면 된다. location이 위치를 잡아주는 건데 uwsgi로 보내기 때문에 uwsgi_pass django, include는 uwsgi_params(자동으로 설치되어있음)를 하면 된다.  
+**server** : 서버에 대한 상세 정의이다. listen으로 포트를 적고 server_name은 localhost를 적는다. client_max_body_size는 요청이 올라올 때 최대 크기를 정하는 건데 입맛대로 해주면 된다. location이 위치를 잡아주는 건데 uwsgi로 보내기 때문에 uwsgi_pass django, include는 uwsgi_params(자동으로 설치되어있음)를 하면 된다.  
 
  
 
-이제 모든 준비가 끝났습니다. nginx를 가동하면 /etc/nginx/nginx.conf에서 /etc/nginx/sites-enables/server_dev를 읽어서 80(http) 포트번호로 들어오는 요청을 uwsgi로 보낼 겁니다. uwsgi는 장고로 보내기 때문에 장고 페이지가 뜨겠죠? nginx를 가동하기 전에 /etc/nginx/sites-enables/default를 조금 수정해야 한다. 왜냐면 여기도 80번 포트를 사용하게 되어있기때문.
-
- 
-
-
-
-![img](https://blog.kakaocdn.net/dn/c311HQ/btqDVemafw4/WV0go1K5aHcFoipTjDhry0/img.png)저는 그냥 8080으로 변경했다.
-
-
-
- 
-
-이제 nginx를 실행하겠다. (uwsgi도 실행해주세요) 
-
- 
-
-nginx를 기동 하는 건 sudo systemctl start nginx를 입력하면 된다.
+이제 모든 준비가 끝났다. nginx를 가동하면 /etc/nginx/nginx.conf에서 /etc/nginx/sites-enables/server_dev를 읽어서 80(http) 포트번호로 들어오는 요청을 uwsgi로 보낼 거다. uwsgi는 장고로 보내기 때문에 장고 페이지가 뜨겠죠? nginx를 가동하기 전에 /etc/nginx/sites-enables/default를 조금 수정해야 한다. 왜냐면 여기도 80번 포트를 사용하게 되어있기때문.
 
  
 
 
 
-![img](https://blog.kakaocdn.net/dn/bkGA6j/btqDVuChzjF/Jcj6WnPTn6q828yfAY6hn0/img.png)ps grap을 해보면 떠있습니다!
+![img](https://blog.kakaocdn.net/dn/c311HQ/btqDVemafw4/WV0go1K5aHcFoipTjDhry0/img.png)나는 그냥 8080으로 변경했다. 
+
+이제 nginx를 실행하겠다. (uwsgi도 실행하자)  
+
+nginx를 기동 하는 건 sudo systemctl start nginx를 입력하면 된다. 
 
 
 
- 
+![img](https://blog.kakaocdn.net/dn/bkGA6j/btqDVuChzjF/Jcj6WnPTn6q828yfAY6hn0/img.png)ps grap을 해보면 떠있다! 
 
 이제 aws 주소로 들어가 볼까요?
-
- 
-
- 
 
 
 
@@ -440,23 +420,17 @@ nginx를 기동 하는 건 sudo systemctl start nginx를 입력하면 된다.
 
 
 
-![img](https://blog.kakaocdn.net/dn/djDVl2/btqDSjbl6Cp/JB213hhZKGhCT3BtaQQPn0/img.png)HTTP를 추가해줍니다. 혹시 나중을 위해서 HTTPS도 추가하셔도 된다. :)
+![img](https://blog.kakaocdn.net/dn/djDVl2/btqDSjbl6Cp/JB213hhZKGhCT3BtaQQPn0/img.png)HTTP를 추가해준다. 혹시 나중을 위해서 HTTPS도 추가해도 된다. :)
 
+방화벽 설정까지 마치면 이제 접속이 될거다.! 
 
-
-방화벽 설정까지 마치면 이제 접속이 될 겁니다.!
-
- 
-
-드디어 client(브라우저) -> nginx -> socket -> uwsgi -> django 가 완성되었습니다!!!
-
- 
+드디어 client(브라우저) -> nginx -> socket -> uwsgi -> django 가 완성되었다!!! 
 
  
 
 ## Mysql 세팅
 
-mysql은 도커로 띄울 건데 따로 정리한 포스트가 있어 링크한다.
+mysql은 도커로 띄울 건데 따로 정리한 포스트가 있어 링크를 참고하면 된다. 어렵지 않다.
 
  
 
@@ -474,27 +448,19 @@ sudo usermod -aG docker $USER # 현재 접속중인 사용자에게 권한주기
 sudo usermod -aG docker your-user # your-user 사용자에게 권한주기
 ```
 
-**권한을 주지 않으면 django와 연결이 안됩니다~!**
-
- 
-
- 
-
- 
+**권한을 주지 않으면 django와 연결이 안된다~!**
 
  
 
 ### 정리하기 
 
-이번 포스팅에서는 아래 3가지를 진행했다.
+이번 포스팅에서는 아래 3가지를 진행했다. 
 
- 
+1. uwsgi 설치 및 세팅
 
-\1. uwsgi 설치 및 세팅
+2. nginx 설치 및 세팅
 
-\2. nginx 설치 및 세팅
-
-\3. docker로 mysql - django연결
+3. docker로 mysql - django연결
 
  
 
