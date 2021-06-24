@@ -29,13 +29,13 @@ docker가 등장하면서 컨테이너로 서버를 운영/배포/관리가 쉬�
 
 그래서 이제 서버를 docker화 해보자~!
 
-(docker에 대한 개념 설명은 **생략**한다. 구글링 하면 많이 나와요 ><) 
+(docker에 대한 개념 설명은 **생략**한다. 구글링 하면 많이 나온다 ><) 
 
  
 
 ## Django -> docker로 만들기
 
-일단 docker로 만들 건데 어디까지 docker로 만들지 범위를 정해야 한다. 범위를 정한다는 게 이상하게 들릴 수 있는데요, 예를 들면 django만 docker로 만들고 nginx는 서버에 직접 설치하는 방식인지, 아니면 nginx와 django 모두 docker로 만들지를 정하는것이다. 
+일단 docker로 만들 건데 어디까지 docker로 만들지 범위를 정해야 한다. 범위를 정한다는 게 이상하게 들릴 수 있는데, 예를 들면 django만 docker로 만들고 nginx는 서버에 직접 설치하는 방식인지, 아니면 nginx와 django 모두 docker로 만들지를 정하는것이다. 
 
 저희는 nginx-uwsgi-django 모두 docker로 만들어 보겠다.
 
@@ -138,7 +138,7 @@ uwsgi
 docker build -t server_dev/django .
 ```
 
- -t는 만드는 docker 이미지에 이름을 붙여주는 옵션이다. 그 뒤에 .은 docker 이미지로 만들 폴더 경로를 말하다. 저희는 ~/docker-server/server_dev/ 경로에 있기 때문에 .을 찍어서 현재 폴더를 지정하다. 
+ -t는 만드는 docker 이미지에 이름을 붙여주는 옵션이다. 그 뒤에 .은 docker 이미지로 만들 폴더 경로를 말하다. 이프로젝트는 ~/docker-server/server_dev/ 경로에 있기 때문에 .을 찍어서 현재 폴더를 지정하다. 
 
 
 
