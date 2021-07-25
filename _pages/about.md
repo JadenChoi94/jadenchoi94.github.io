@@ -3,7 +3,7 @@ permalink: /about/
 title: "About"
 excerpt: "About Me"
 search: true
-last_modified_at: 2021-06-01T13:00:00+09:00
+last_modified_at: 2021-07-25T13:00:00+09:00
 toc: true
 
 --- 
@@ -23,7 +23,8 @@ padding: 5px;
 * MAJOR : Business(BBA)
 
 ## Career & Activities
-  - WIPS (2020.01 ~ 2021.01)
+  - Cobak, Pangyo (2021.08 ~ )
+  - WIPS, Daejeon (2020.01 ~ 2021.01)
   - LG Electronics in Vietnam, Haiphong (2019.01 ~ 2019.02)
   - SolBridge International School of Business (2013.03 ~ 2019.08)
   - Korea Army Training Center, Drill Sergeant (2014.12 ~ 2016.09)
