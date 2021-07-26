@@ -1,3 +1,18 @@
+---
+title: '[python]Functions'
+excerpt: Back to Basic
+categories:
+    - python
+
+tag:
+    - python
+    
+
+comments: true
+last_modified_at: 2021-07-26T10:00:00+09:00
+toc: true
+---
+
 # Back to Basic
 
 > Python functions
