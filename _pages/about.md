@@ -31,7 +31,8 @@ padding: 5px;
 
 ## Current Interest
  * Web Development
- * Bigdata
+ * BlockChain
+ * BigData
  * Android Applicaiton  
  * Internet of Things
 
