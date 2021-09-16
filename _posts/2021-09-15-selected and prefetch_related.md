@@ -2,10 +2,11 @@
 title: 'ORM'
 excerpt: 쿼리를 줄이자
 categories:
-    - SQL
+    - DRF
 
 tag:
-    - SQL
+    - DRF
+    - ORM
     
 
 comments: true
