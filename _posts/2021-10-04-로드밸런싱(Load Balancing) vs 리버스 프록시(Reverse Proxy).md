@@ -2,10 +2,10 @@
 title: '로드밸런싱(Load Balancing) vs 리버스 프록시(Reverse Proxy)'
 excerpt: 
 categories:
-    - 네트워크
+    - Network
 
 tag:
-    - 네트워크
+    - Network
 
 comments: true
 last_modified_at: 2021-10-02T10:00:00+09:00
