@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-title: "About"
+title: "About ME"
 excerpt: "About Me"
 search: true
 last_modified_at: 2021-12-12T13:00:00+09:00

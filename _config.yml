@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : "Choi junhyuk"
-  avatar           : "/assets/images/selfie.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/selfie2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "To be versatile developer"
   location         : "South Korea"
   email            :
