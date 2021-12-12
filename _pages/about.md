@@ -3,13 +3,13 @@ permalink: /about/
 title: "About"
 excerpt: "About Me"
 search: true
-last_modified_at: 2021-07-25T13:00:00+09:00
+last_modified_at: 2021-12-12T13:00:00+09:00
 toc: true
 
 --- 
 
 ## Profile
-<center><img src="/assets/images/selfie1.jpg" width="30%" height="30%" style="
+<center><img src="/assets/images/selfie.jpg" width="40%" height="40%" style="
 border: 1px solid #cab6de;
 border-radius: 50%;
 padding: 5px;
@@ -31,10 +31,9 @@ padding: 5px;
 
 ## Current Interest
  * Web Development
- * BlockChain
- * BigData
- * Android Applicaiton  
- * Internet of Things
+ * Smart Contract
+ * Data Analysis
+ * IOS Applicaiton  
 
 ## Contact
  * Email : cjunhyuke@gmail.com
