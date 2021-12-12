@@ -15,10 +15,10 @@
 minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ko-KR"
 title                    : "Devholic"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : python, django, web3, FUN😃
 name                     : "Choi Junhyuk"
 description              : "기억보단 기록을"
 url                      : "https://jadenchoi94.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
