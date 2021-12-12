@@ -6,24 +6,17 @@ categories:
 
 tag:
     - 네트워크
-    
 
 comments: true
 last_modified_at: 2021-10-02T10:00:00+09:00
 toc: true
 ---
 
- 
-
- 
 
 ### **1. What is Load Balancing?**
 
-------
 
 **Load Balancing(로드밸런싱)** 은 여러 Server에 **workload(작업량)를 분산**시켜 웹사이트, 애플리케이션, 데이터 베이스 그리고 다른 서비스들의 퍼포먼스(performance)와 신뢰성(reliablity)을 향상하기 위한 인프라(서비스)입니다.
-
- 
 
 
 
