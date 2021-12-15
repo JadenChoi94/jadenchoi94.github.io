@@ -20,7 +20,6 @@ padding: 5px;
 
 
 * NAME : Junhyuk Choi
-* MAJOR : Business(BBA)
 
 ## Career & Activities
   - Cobak, Pangyo (2021.08 ~ )
