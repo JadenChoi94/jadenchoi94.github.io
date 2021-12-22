@@ -19,7 +19,9 @@ toc: true
 
 
 
-![img](https://blog.kakaocdn.net/dn/ddyrBN/btqDbkONaSB/OxIAMKMuBKkVPCYJVFHyn0/img.png)로드밸런싱을 적용하지 않은 웹서비스
+<p align="center"><img src = "https://blog.kakaocdn.net/dn/ddyrBN/btqDbkONaSB/OxIAMKMuBKkVPCYJVFHyn0/img.png"></p>
+
+<p align="center">[로드밸런싱을 적용하지 않은 웹서비스]</p>
 
 
 
@@ -29,7 +31,7 @@ toc: true
 
 
 
-![img](https://blog.kakaocdn.net/dn/bHrZA8/btqDceHkufm/xAkdmxyC8O6FyJ3wD2xIXk/img.png)로드밸렁싱을 적용한 웹 서비스
+![img](https://blog.kakaocdn.net/dn/bHrZA8/btqDceHkufm/xAkdmxyC8O6FyJ3wD2xIXk/img.png)<p align="center">[로드밸렁싱을 적용한 웹 서비스]</p>
 
 
 
@@ -71,7 +73,8 @@ toc: true
 
 
 
-![img](https://blog.kakaocdn.net/dn/c5FgJM/btqDbFSHx32/5LMPlwFlAlN8T38ryQwzDK/img.png)리버스 프록시를 나타낸 그림
+![img](https://blog.kakaocdn.net/dn/c5FgJM/btqDbFSHx32/5LMPlwFlAlN8T38ryQwzDK/img.png) 
+<p align="center">[리버스 프록시를 나타낸 그림]</p>
 
 
 
