@@ -31,7 +31,8 @@ toc: true
 
 
 
-![img](https://blog.kakaocdn.net/dn/bHrZA8/btqDceHkufm/xAkdmxyC8O6FyJ3wD2xIXk/img.png)<p align="center">[로드밸렁싱을 적용한 웹 서비스]</p>
+![img](https://blog.kakaocdn.net/dn/bHrZA8/btqDceHkufm/xAkdmxyC8O6FyJ3wD2xIXk/img.png) 
+<p align="center">[로드밸렁싱을 적용한 웹 서비스]</p>
 
 
 
