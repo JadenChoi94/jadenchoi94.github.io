@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "ko-KR"
 title                    : "Devholic"
 title_separator          : "-"
-subtitle                 : python, django, web3, FUN😃
+subtitle                 : Python, Django, Web3, FUN😃
 name                     : "Choi Junhyuk"
-description              : "기억보단 기록을"
+description              : "I LOVE MONDAY"
 url                      : "https://jadenchoi94.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "jadenchoi94/jadenchoi94.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -97,7 +97,7 @@ analytics:
 author:
   name             : "Choi junhyuk"
   avatar           : "/assets/images/selfie2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "기본부터 차근차근"
+  bio              : "차근차근 하나씩"
   location         : "South Korea"
   email            :
   links:
