@@ -26,3 +26,33 @@ $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 a{
   font-weight: bold;
 }
+
+/* 쿠팡 파트너스 배너 스타일 */
+.coupang-banner {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.coupang-banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.sidebar-banner {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.sidebar-banner .coupang-banner {
+  margin: 0;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+}
