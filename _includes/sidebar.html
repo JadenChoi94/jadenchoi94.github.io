@@ -2,9 +2,26 @@
   <div class="sidebar sticky">
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   
-  <!-- 쿠팡 파트너스 배너 (사이드바) -->
+  <!-- 쿠팡 파트너스 버튼 (사이드바) -->
   <div class="sidebar-banner" style="margin: 20px 0; text-align: center;">
-    {% include coupang-banner.html %}
+    <a href="https://link.coupang.com/a/cQcYwE" target="_blank" referrerpolicy="unsafe-url" 
+       class="coupang-sidebar-btn"
+       style="display: block; 
+              background: linear-gradient(135deg, #ff6b6b, #ee5a24); 
+              color: white; 
+              padding: 12px 20px; 
+              border-radius: 20px; 
+              text-decoration: none; 
+              font-weight: bold; 
+              font-size: 14px; 
+              box-shadow: 0 3px 10px rgba(238, 90, 36, 0.3); 
+              transition: all 0.3s ease; 
+              border: none;
+              cursor: pointer;"
+       onmouseover="this.style.background='linear-gradient(135deg, #ee5a24, #ff6b6b)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(238, 90, 36, 0.4)'"
+       onmouseout="this.style.background='linear-gradient(135deg, #ff6b6b, #ee5a24)'; this.style.transform='translateY(0px)'; this.style.boxShadow='0 3px 10px rgba(238, 90, 36, 0.3)'">
+      🛒 쿠팡 특가상품
+    </a>
   </div>
   
   {% if page.sidebar %}
