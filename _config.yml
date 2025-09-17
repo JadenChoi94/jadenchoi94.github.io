@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "ko-KR"
 title                    : "Devholic"
 title_separator          : "-"
-subtitle                 : Python, Django, Web3, FUN😃
+subtitle                 : Python, Kotlin, Web3, FUN😃
 name                     : "Choi Junhyuk"
 description              : "I LOVE MONDAY"
 url                      : "https://jadenchoi94.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -68,7 +68,7 @@ google:
 google_site_verification :
 bing_site_verification   :
 yandex_site_verification :
-naver_site_verification  : "f9de61706f3401ef72446eb702339bca8c03e507"
+naver_site_verification  : 
 
 # Social Sharing
 twitter:
@@ -106,7 +106,7 @@ author:
       url: "cjunhyuke@gmail.com"
     - label: "Linkedin"
       icon: "fas fa-fw fa-link"
-      url: "https://www.linkedin.com/in/junhyuk-choi-509b48198/"
+      url: "https://www.linkedin.com/in/junhyukeeee"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
