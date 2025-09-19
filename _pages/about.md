@@ -3,7 +3,7 @@ permalink: /about/
 title: "About ME"
 excerpt: "About Me"
 search: true
-last_modified_at: 2021-12-12T13:00:00+09:00
+last_modified_at: 2025-09-19T13:00:00+09:00
 toc: true
 
 --- 
@@ -22,21 +22,22 @@ padding: 5px;
 * NAME : Junhyuk Choi
 
 ## Career & Activities
-  - Cobak, Pangyo (2021.08 ~ )
+  - Trip11, Seoul (2024.05 ~ )
+  - Cobak, Pangyo (2021.08 ~ 2024.04)
   - WIPS, Daejeon (2020.01 ~ 2021.01)
   - LG Electronics in Vietnam, Haiphong (2019.01 ~ 2019.02)
   - SolBridge International School of Business (2013.03 ~ 2019.08)
   - Korea Army Training Center, Drill Sergeant (2014.12 ~ 2016.09)
 
 ## Current Interest
- * Web Development
+ * Kubernetes
+ * Blockchain
  * Smart Contract
  * Data Analysis
- * IOS Applicaiton  
 
 ## Contact
  * Email : cjunhyuke@gmail.com
  * Git : [https://github.com/jadenchoi94](https://github.com/jadenchoi94)
  * Blog : [https://jadenchoi94.github.io/](https://jadenchoi94.github.io/)
- * LinkedIn : [https://www.linkedin.com/in/junhyuk-choi-509b48198/](https://www.linkedin.com/in/junhyuk-choi-509b48198/)
+ * LinkedIn : [https://www.linkedin.com/in/junhyukeeee/](https://www.linkedin.com/in/junhyukeeee)
 
