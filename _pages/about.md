@@ -19,8 +19,6 @@ padding: 5px;
 "></center>
 
 
-* NAME : Junhyuk Choi
-
 ## Career & Activities
   - Trip11, Seoul (2024.05 ~ )
   - Cobak, Pangyo (2021.08 ~ 2024.04)
